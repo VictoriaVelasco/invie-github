@@ -1,0 +1,121 @@
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash list
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash alist
+usage: git stash list [<options>]
+   or: git stash show [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+                      [-u|--include-untracked] [-a|--all] [<message>]
+   or: git stash [push [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+                       [-u|--include-untracked] [-a|--all] [-m <message>]
+                       [-- <pathspec>...]]
+   or: git stash clear
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash list
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ clear
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ touch cambio2
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ ?it stats
+bash: ?it: command not found
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git status
+On branch RD
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        cambio2
+        git__merge_rebase.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash
+No local changes to save
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git add cambio2
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git status
+On branch RD
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   cambio2
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        git__merge_rebase.txt
+
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash
+Saved working directory and index state WIP on RD: a35b338 invie responsive
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ touch cambio3
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git add -A
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash
+Saved working directory and index state WIP on RD: a35b338 invie responsive
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash list
+stash@{0}: WIP on RD: a35b338 invie responsive
+stash@{1}: WIP on RD: a35b338 invie responsive
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git status
+On branch RD
+nothing to commit, working tree clean
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash apply
+
+On branch RD
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   cambio3
+        new file:   git__merge_rebase.txt
+
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash
+Saved working directory and index state WIP on RD: a35b338 invie responsive
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash list
+stash@{0}: WIP on RD: a35b338 invie responsive
+stash@{1}: WIP on RD: a35b338 invie responsive
+stash@{2}: WIP on RD: a35b338 invie responsive
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
+$ git stash apply stash@{2}
+On branch RD
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   cambio2
+
+
+DABEIBA@vvelasco MINGW64 ~/Desktop/Platzi/invie (RD)
